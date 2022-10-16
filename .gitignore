@@ -11,5 +11,21 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+.pulumi
+**/bin/
+**/obj/
+**/node_modules/
+vendor/
+**/Pulumi.*.yaml
+**/yarn-error.log
+yarn.lock
+package-lock.json
+.idea/
+**/version.txt
+**/dist
+nuget/
+
+ci-scripts/
+*.tar.gz
+
+/provider/cmd/pulumi-resource-*/schema.go

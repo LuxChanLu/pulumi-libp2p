@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/pulumi/pulumi/master/pkg/codegen/schema/pulumi.json
+---
+name: libp2p
+resources:
+  libp2p:index:Key:
+    isComponent: true
+    inputProperties:
+      type:
+        type: string
+        description: Type of the key to generate one of RSA, ED25519, SECP256K1, ECDSA
+      bits:
+        type: integer
+        description: Siye of the key (Only for RSA key)
+    requiredInputs:
+      - type
+    properties:
+      peerId:
+        type: string
+        description: Peer ID
+      private:
+        type: string
+        description: Marshalled private key
+        secret: true
+      public:
+        type: string
+        description: Marshalled public key
+    required:
+      - peerId
+      - private
+      - public
+language:
+  csharp:
+    packageReferences:
+      Pulumi: 3.*
+      LuxChanLu.Pulumi.Libp2p: 4.*
+  go:
+    generateResourceContainerTypes: true
+    importBasePath: github.com/pulumi/pulumi-libp2p/sdk/go/libp2p
+  nodejs:
+    dependencies:
+      "@LuxChanLu/pulumi-libp2p": "^1.0.0"
+    devDependencies:
+      typescript: "^3.7.0"
+  python:
+    requires:
+      pulumi: ">=3.0.0,<4.0.0"
+      pulumi-libp2p: ">=1.0.0"
+
