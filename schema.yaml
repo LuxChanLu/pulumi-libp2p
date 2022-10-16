@@ -35,7 +35,7 @@ language:
       LuxChanLu.Pulumi.Libp2p: 4.*
   go:
     generateResourceContainerTypes: true
-    importBasePath: github.com/pulumi/pulumi-libp2p/sdk/go/libp2p
+    importBasePath: github.com/LuxChanLu/pulumi-libp2p/sdk/go/libp2p
   nodejs:
     dependencies:
       "@LuxChanLu/pulumi-libp2p": "^1.0.0"

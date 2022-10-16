@@ -1,4 +1,4 @@
-module github.com/pulumi/pulumi-libp2p/sdk
+module github.com/LuxChanLu/pulumi-libp2p/sdk
 
 go 1.17
 

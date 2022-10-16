@@ -101,7 +101,7 @@ language:
       Pulumi.Aws: 4.*
   go:
     generateResourceContainerTypes: true
-    importBasePath: github.com/pulumi/pulumi-libp2p/sdk/go/libp2p
+    importBasePath: github.com/LuxChanLu/pulumi-libp2p/sdk/go/libp2p
   nodejs:
     dependencies:
       "@pulumi/aws": "^4.0.0"
