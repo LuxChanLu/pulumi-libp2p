@@ -48,7 +48,7 @@ type keyArgs struct {
 	// Siye of the key (Only for RSA key)
 	Bits *int `pulumi:"bits"`
 	// Type of the key to generate one of RSA, ED25519, SECP256K1, ECDSA
-	Type string `pulumi:"type"`
+	Type KeyType `pulumi:"type"`
 }
 
 // The set of arguments for constructing a Key resource.
@@ -56,7 +56,7 @@ type KeyArgs struct {
 	// Siye of the key (Only for RSA key)
 	Bits pulumi.IntPtrInput
 	// Type of the key to generate one of RSA, ED25519, SECP256K1, ECDSA
-	Type pulumi.StringInput
+	Type KeyTypeInput
 }
 
 func (KeyArgs) ElementType() reflect.Type {

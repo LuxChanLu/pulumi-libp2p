@@ -1,4 +1,4 @@
-module github.com/pulumi/pulumi-libp2p
+module github.com/LuxChanLu/pulumi-libp2p
 
 go 1.18
 

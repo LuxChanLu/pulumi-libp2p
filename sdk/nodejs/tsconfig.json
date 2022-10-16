@@ -16,6 +16,7 @@
         "index.ts",
         "key.ts",
         "provider.ts",
+        "types/enums/index.ts",
         "utilities.ts"
     ]
 }

@@ -8,6 +8,9 @@ import * as utilities from "./utilities";
 export * from "./key";
 export * from "./provider";
 
+// Export enums:
+export * from "./types/enums";
+
 // Import resources to register:
 import { Key } from "./key";
 

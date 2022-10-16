@@ -72,7 +72,7 @@ namespace Pulumi.Libp2p
         /// Type of the key to generate one of RSA, ED25519, SECP256K1, ECDSA
         /// </summary>
         [Input("type", required: true)]
-        public Input<string> Type { get; set; } = null!;
+        public Input<Pulumi.Libp2p.KeyType> Type { get; set; } = null!;
 
         public KeyArgs()
         {

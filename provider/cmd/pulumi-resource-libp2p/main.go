@@ -3,8 +3,8 @@
 package main
 
 import (
-	"github.com/pulumi/pulumi-libp2p/pkg/provider"
-	"github.com/pulumi/pulumi-libp2p/pkg/version"
+	"github.com/LuxChanLu/pulumi-libp2p/pkg/provider"
+	"github.com/LuxChanLu/pulumi-libp2p/pkg/version"
 )
 
 var providerName = "libp2p"

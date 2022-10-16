@@ -1,12 +1,25 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/pulumi/pulumi/master/pkg/codegen/schema/pulumi.json
 ---
 name: libp2p
+types:
+  libp2p:index:KeyType:
+    type: string
+    enum: 
+      - name: RSA
+        value: RSA
+      - name: ED25519
+        value: ED25519
+      - name: SECP256K1
+        value: SECP256K1
+      - name: ECDSA
+        value: ECDSA
 resources:
   libp2p:index:Key:
     isComponent: true
     inputProperties:
       type:
-        type: string
+        type: enum
+        $ref: "#/types/libp2p:index:KeyType"
         description: Type of the key to generate one of RSA, ED25519, SECP256K1, ECDSA
       bits:
         type: integer

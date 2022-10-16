@@ -7,17 +7,18 @@ import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
 from . import _utilities
+from ._enums import *
 
 __all__ = ['KeyArgs', 'Key']
 
 @pulumi.input_type
 class KeyArgs:
     def __init__(__self__, *,
-                 type: pulumi.Input[str],
+                 type: pulumi.Input['KeyType'],
                  bits: Optional[pulumi.Input[int]] = None):
         """
         The set of arguments for constructing a Key resource.
-        :param pulumi.Input[str] type: Type of the key to generate one of RSA, ED25519, SECP256K1, ECDSA
+        :param pulumi.Input['KeyType'] type: Type of the key to generate one of RSA, ED25519, SECP256K1, ECDSA
         :param pulumi.Input[int] bits: Siye of the key (Only for RSA key)
         """
         pulumi.set(__self__, "type", type)
@@ -26,14 +27,14 @@ class KeyArgs:
 
     @property
     @pulumi.getter
-    def type(self) -> pulumi.Input[str]:
+    def type(self) -> pulumi.Input['KeyType']:
         """
         Type of the key to generate one of RSA, ED25519, SECP256K1, ECDSA
         """
         return pulumi.get(self, "type")
 
     @type.setter
-    def type(self, value: pulumi.Input[str]):
+    def type(self, value: pulumi.Input['KeyType']):
         pulumi.set(self, "type", value)
 
     @property
@@ -55,14 +56,14 @@ class Key(pulumi.ComponentResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  bits: Optional[pulumi.Input[int]] = None,
-                 type: Optional[pulumi.Input[str]] = None,
+                 type: Optional[pulumi.Input['KeyType']] = None,
                  __props__=None):
         """
         Create a Key resource with the given unique name, props, and options.
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] bits: Siye of the key (Only for RSA key)
-        :param pulumi.Input[str] type: Type of the key to generate one of RSA, ED25519, SECP256K1, ECDSA
+        :param pulumi.Input['KeyType'] type: Type of the key to generate one of RSA, ED25519, SECP256K1, ECDSA
         """
         ...
     @overload
@@ -88,7 +89,7 @@ class Key(pulumi.ComponentResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  bits: Optional[pulumi.Input[int]] = None,
-                 type: Optional[pulumi.Input[str]] = None,
+                 type: Optional[pulumi.Input['KeyType']] = None,
                  __props__=None):
         if opts is None:
             opts = pulumi.ResourceOptions()

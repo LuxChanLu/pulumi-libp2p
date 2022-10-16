@@ -2,6 +2,7 @@
 // *** Do not edit by hand unless you're certain you know what you are doing! ***
 
 import * as pulumi from "@pulumi/pulumi";
+import { input as inputs, output as outputs, enums } from "./types";
 import * as utilities from "./utilities";
 
 export class Key extends pulumi.ComponentResource {
@@ -74,5 +75,5 @@ export interface KeyArgs {
     /**
      * Type of the key to generate one of RSA, ED25519, SECP256K1, ECDSA
      */
-    type: pulumi.Input<string>;
+    type: pulumi.Input<enums.KeyType>;
 }
