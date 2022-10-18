@@ -51,11 +51,11 @@ language:
     importBasePath: github.com/LuxChanLu/pulumi-libp2p/sdk/go/libp2p
   nodejs:
     dependencies:
-      "@LuxChanLu/pulumi-libp2p": "^1.0.0"
+      "@LuxChanLu/pulumi-libp2p": "^1.0.1"
     devDependencies:
       typescript: "^3.7.0"
   python:
     requires:
       pulumi: ">=3.0.0,<4.0.0"
-      pulumi-libp2p: ">=1.0.0"
+      pulumi-libp2p: ">=1.0.1"
 
