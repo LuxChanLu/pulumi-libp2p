@@ -1,4 +1,4 @@
-VERSION         := 1.0.3
+VERSION         := 1.0.4
 
 PACK            := libp2p
 PROJECT         := github.com/LuxChanLu/pulumi-${PACK}
