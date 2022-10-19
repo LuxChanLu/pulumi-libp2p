@@ -23,8 +23,8 @@ var keyTypeMapping = map[KeyType]int{
 }
 
 type KeyArgs struct {
-	Type pulumi.String   `pulumi:"type"`
-	Bits pulumi.IntInput `pulumi:"bits"`
+	Type pulumi.StringInput `pulumi:"type"`
+	Bits pulumi.IntInput    `pulumi:"bits"`
 }
 
 type Key struct {
