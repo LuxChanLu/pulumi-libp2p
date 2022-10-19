@@ -48,7 +48,7 @@ func NewKey(ctx *pulumi.Context,
 	}
 
 	generated := pulumi.All(args.Type, args.Bits).ApplyT(func(args []interface{}) ([]string, error) {
-		priv, pub, err := crypto.GenerateKeyPair(keyTypeMapping[KeyType(args[0].(string))], args[0].(int))
+		priv, pub, err := crypto.GenerateKeyPair(keyTypeMapping[KeyType(args[0].(string))], args[1].(int))
 		if err != nil {
 			return nil, err
 		}
