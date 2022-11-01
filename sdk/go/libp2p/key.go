@@ -36,6 +36,7 @@ func NewKey(ctx *pulumi.Context,
 		"private",
 	})
 	opts = append(opts, secrets)
+	opts = pkgResourceDefaultOpts(opts)
 	var resource Key
 	err := ctx.RegisterRemoteComponentResource("libp2p:index:Key", name, args, &resource, opts...)
 	if err != nil {

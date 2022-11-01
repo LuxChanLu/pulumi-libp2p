@@ -1,6 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/pulumi/pulumi/master/pkg/codegen/schema/pulumi.json
 ---
 name: libp2p
+pluginDownloadUrl: github://api.github.com/LuxChanLu
+
 types:
   libp2p:index:KeyType:
     type: string

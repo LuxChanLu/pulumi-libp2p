@@ -48,6 +48,7 @@ namespace Pulumi.Libp2p
             var defaultOptions = new ComponentResourceOptions
             {
                 Version = Utilities.Version,
+                PluginDownloadURL = "github://api.github.com/LuxChanLu",
                 AdditionalSecretOutputs =
                 {
                     "private",
