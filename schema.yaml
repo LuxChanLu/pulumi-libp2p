@@ -21,9 +21,11 @@ resources:
         type: enum
         $ref: "#/types/libp2p:index:KeyType"
         description: Type of the key to generate one of RSA, ED25519, SECP256K1, ECDSA
+        replaceOnChanges: true
       bits:
         type: integer
         description: Siye of the key (Only for RSA key)
+        replaceOnChanges: true
     requiredInputs:
       - type
     properties:
@@ -50,6 +52,7 @@ language:
     importBasePath: github.com/LuxChanLu/pulumi-libp2p/sdk/go/libp2p
   nodejs:
     dependencies:
+      "@pulumi/pulumi": "^3.45.0"
     devDependencies:
       typescript: "^3.7.0"
   python:
