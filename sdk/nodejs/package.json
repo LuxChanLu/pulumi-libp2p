@@ -1,5 +1,5 @@
 {
-    "name": "@pulumi/libp2p",
+    "name": "@luxchanlu/pulumi-libp2p",
     "version": "${VERSION}",
     "scripts": {
         "build": "tsc",
